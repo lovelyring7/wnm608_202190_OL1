@@ -1,2 +1,6 @@
-# wnm608_202190_OL1
-Repository for WNM608
+# Rachel Yoon
+
+## Relevant Links
+- https://rachellys.com
+- https://rachellys.com/aau/wnm608/Yoon.Rachel
+- https://rachellys.com/aau/wnm608/Yoon.Rachel/styleguide
