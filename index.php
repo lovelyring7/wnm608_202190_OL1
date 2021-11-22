@@ -3,43 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Elish</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="test2-5.css">
-	<link rel="stylesheet" href="gridsystem.css">
-	<link rel="stylesheet" href="storetheme_elish.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital@0;1&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<?php include "meta.php"; ?>
 	<?php include "itemlist.php"; ?>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div id="sub" class="display-flex nav">
-				<div class="flex-stretch"></div>
-				<ul class="display-flex">
-					<li><a href="#"><img src="image/search.png"></a></li>
-					<li><a href="#"><img src="image/cart.png"></a></li>
-					<li><a href="#">Sign in</a></li>
-				</ul>
-			</div>
-			<div class="display-flex">
-				<div class="flex-none">
-					<h1>Elish</h1>
-				</div>
-				<div class="flex-stretch"></div>
-				
-				<nav class="display-flex nav">
-					<ul class="display-flex">
-						<li><a href="shop.php">Shop</a></li>
-						<li><a href="about.php">About</a></li>
-						<li><a href="help.php">Help</a></li>
-
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
+	
+	<?php include "navbar.php"; ?>
 
 
 
@@ -47,15 +16,14 @@
 
 	<section id="hero">
 		<div class="container grid">
-			<div class="col-md-6">
+			<div class="col-xl-6 col-xs-12">
 				<div>
 					<h2>Wear Stylish</h2>
 					<p>Be still stylish, wearing a mask. </p>
 					<button class="button1">Shop Now</button>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<img src="image/hero.jpg">
+			<div class="col-xl-6 col-xs-12">
 			</div>
 		</div>
 	</section>
@@ -172,7 +140,7 @@
 				<h4>Join our mailing list </h4>
 				<p>Get info about promotions and new arrivals</p>
 				<form class="display-flex grid">
-					<input class="col-lg-8 col-xs-12" type="text" placeholder="Enter your email address"><button class="col-lg-4 col-md-4 col-xs-6">Submit</button>
+					<input class="col-lg-8 col-xs-12" type="text" placeholder="Enter your email address"><button class="col-lg-3 col-md-3 col-xs-6">Submit</button>
 				</form>
 			</div>
 			<div class="flex-stretch"></div>
