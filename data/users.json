@@ -1,0 +1,38 @@
+[
+	{
+		"name":"Rachel Yoon",
+		"type": "UX designer",
+		"email": "rachelyoon0131@gmail.com",
+		"classes": [608,638,601]
+
+	},
+	{
+		"name":"Adam Huber",
+		"type": "Entropreneur",
+		"email": "adamhuber@gmail.com",
+		"classes": [634,631,603]
+		
+	},
+	{
+		"name":"Sam Underwood",
+		"type": "Guitarist",
+		"email": "samunderwood@gmail.com",
+		"classes": [613,633,602]
+		
+	},
+	{
+		"name":"Penn Badgley",
+		"type": "Actor",
+		"email": "pennbadgley@gmail.com",
+		"classes": [604,613,634]
+		
+	},
+	{
+		"name":"Elizabeth Gilles",
+		"type": "Actress",
+		"email": "lizgililes@gmail.com",
+		"classes": [614,634,623]
+		
+	}
+
+]
