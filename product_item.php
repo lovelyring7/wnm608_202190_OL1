@@ -10,7 +10,7 @@
 				return $r. "<img src='$o'>";
 			});
 
-			print_p($_SESSION);
+			// print_p($_SESSION);
 
 ?>
 <!DOCTYPE html>

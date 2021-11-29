@@ -1,10 +1,22 @@
-<!DOCTYPE html>
+<?
+
+session_start();
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Elish</title>
 	<?php include "meta.php"; ?>
 	<?php include "itemlist.php"; ?>
+
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/product_list.js"></script>
+
 </head>
 <body>
 	
@@ -17,12 +29,20 @@
 	<section id="best">
 		<div class="container">
 			<h2>Product list</h2>
+
+
+			<div class="form-control">
+				<form class="hotdog light" id="product-search">
+					<input type="search" placeholder="Search Product">
+				</form>
+			</div>
+
+			<div class="productlist grid gap"></div>
+			
 			
 			
 			<?php
 
-			include_once "lib/php/functions.php";
-			include_once "parts/templates.php";
 
 			$result =makeQuery(
 				makeConn(), 
@@ -36,6 +56,7 @@
 			echo "<div class='grid contents'>",array_reduce($result, 'productListTemplate'),"</div>";
 
 			?>
+
 
 		</div>
 	</section>

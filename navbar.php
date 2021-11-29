@@ -1,10 +1,16 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+?>
+
 <header>
 		<div class="container">
 			<div id="sub" class="display-flex nav">
 				<div class="flex-stretch"></div>
 				<ul class="display-flex">
 					<li><a href="#"><img src="image/search.png"></a></li>
-					<li><a href="product_cart.php"><img src="image/cart.png"></a></li>
+					<li><a href="product_cart.php"><img src="image/cart.png"><span class="badge"><?= makeCartBadge(); ?></span></a></li>
 					<li><a href="#">Sign in</a></li>
 				</ul>
 			</div>
