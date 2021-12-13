@@ -4,7 +4,8 @@ include_once "lib/php/functions.php";
 
 ?>
 
-<header>
+<input type="checkbox" id="menu" class="hidden">
+<header class="navbar">
 		<div class="container">
 			<div id="sub" class="display-flex nav">
 				<div class="flex-stretch"></div>
@@ -19,8 +20,10 @@ include_once "lib/php/functions.php";
 					<a href="index.php"><h1>Elish</h1></a>
 				</div>
 				<div class="flex-stretch"></div>
-				
-				<nav class="display-flex nav">
+				<div class="flex-none menu-button">
+					<label for="menu">&equiv;</label>
+				</div>
+				<nav class="display-flex nav2">
 					<ul class="display-flex">
 						<li><a href="product_list.php">Shop</a></li>
 						<li><a href="about.php">About</a></li>

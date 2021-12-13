@@ -1,0 +1,73 @@
+
+:root{
+	--color-offwhite: #FFF;
+}
+
+body{
+	background-color:var(--color-offwhite);
+}
+
+
+.images-main img{
+	width:100%;
+	height: 40vh;
+	object-fit:contain;
+
+}
+
+.images-thumbs img{
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+
+span.badge::after{
+	content:')';
+}
+
+span.badge::before{
+	content: '(';
+}
+
+@media(min-width: 0){
+
+
+
+.menu-button label{
+	display: block;
+	padding: 0 1em;
+}
+
+.navbar .nav-flex ul{
+	display: block;
+}
+
+}
+
+@media(max-width: 379px){
+	.navbar .nav2 {
+	width:100%;
+	display: none;
+}
+
+.navbar .nav2 li{
+	width:100%;
+}
+
+.navbar .display-flex {
+	flex-wrap: wrap;
+}
+
+#menu:checked+.navbar .nav2 {
+	display: block;
+}
+
+}
+
+@media (min-width: 380px){
+	.menu-button label{
+	display: none;
+}
+
+}

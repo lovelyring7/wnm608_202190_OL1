@@ -1,6 +1,6 @@
 <?
 
-session_start();
+
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
@@ -10,12 +10,18 @@ include_once "parts/templates.php";
 <head>
 	<meta charset="UTF-8">
 	<title>Elish</title>
-	<?php include "meta.php"; ?>
+	<?php include "parts/meta.php"; ?>
 	<?php include "itemlist.php"; ?>
 
 	<script src="lib/js/functions.js"></script>
 	<script src="js/templates.js"></script>
 	<script src="js/product_list.js"></script>
+
+	<script>
+		query({type:'products_all'}).then(d=>{
+			$(".productlist").html(listItemTemplate(d.result))
+		});
+	</script>
 
 </head>
 <body>
@@ -36,26 +42,45 @@ include_once "parts/templates.php";
 					<input type="search" placeholder="Search Product">
 				</form>
 			</div>
+			<div class="form-control">
+				<div class="card soft"> 
+					<div class="display-flex flex-wrap">
+						<div class="flex-stretch display-flex">
+						
+							<div class="flex-none">
+								<button data-filter="category" data-value="" type="button" class="form-button3">All</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Jacket" type="button" class="form-button3">Jacket</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Knit" type="button" class="form-button3">Knit</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Skirt" type="button" class="form-button3">Skirt</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="Pants" type="button" class="form-button3">Pants</button>
+							</div>
+						</div>
+					<div class="flex-none">
+						<div class="form-select">
+							<select class="js-sort">
+								<option value="1">Price:High to Low</option>
+								<option value="2">Price:Low to high</option>
+
+							</select>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
 
 			<div class="productlist grid gap"></div>
 			
 			
+			<div class='grid contents'></div>
 			
-			<?php
-
-
-			$result =makeQuery(
-				makeConn(), 
-				"
-				SELECT *
-				 FROM `products`
-				 ORDER BY `price` ASC
-				 LIMIT 12
-				 ");
-
-			echo "<div class='grid contents'>",array_reduce($result, 'productListTemplate'),"</div>";
-
-			?>
 
 
 		</div>

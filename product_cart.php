@@ -7,6 +7,8 @@
 
 			$cart_items = getCartItems();
 
+			$cart = getCart();
+
 
 ?>
 <!DOCTYPE html>
@@ -26,18 +28,43 @@
 	<section id="checkout">
 		<div class="container">
 			<h2>Your cart</h2>
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-7">
-					<div class="card soft">
-						<?= array_reduce($cart_items,'cartListTemplate') ?>
+
+			<?php
+
+			if(count($cart)) {
+				?>
+				<div class="grid gap">
+					<div class="col-xs-12 col-md-7">
+						<div class="card soft">
+							<?= array_reduce($cart_items,'cartListTemplate') ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-5">
+						<div class="card soft flat">
+							<?= cartTotals() ?>
+							<div class="card-section">
+								<a href="product_checkout.php" class="form-button">Checkout</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-5">
-					<div class="card soft flat">
-						<?= cartTotals() ?>
-					</div>
+				<?php
+			} else {
+				?>
+				<div class="card soft">
+					<p>No items in cart</p>
 				</div>
-			</div>
+
+					<h3>Other Recommendations</h3>
+					<?php
+
+				recommendedAnything(6);
+
+				?>
+
+				<?php
+			}
+			?>
 		</div>
 	</section>
 

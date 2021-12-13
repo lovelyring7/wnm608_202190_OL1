@@ -1,3 +1,9 @@
+<?php
+
+			include_once "lib/php/functions.php";
+
+?>
+
 <header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
