@@ -22,7 +22,7 @@ $cart = getCartItems();
 		<div class="container">
 			<h2>Product checkout</h2>
 			<div class="grid gap">
-				
+
 				<div class="col-xs-12 col-md-7">
 				<form class="form">
 							<h3>Address</h3>
@@ -86,9 +86,19 @@ $cart = getCartItems();
 								<input id="payment-zip" type="text" placeholder="Zip code" class="form-input">
 								
 							</div>
-							<div class="form-control">
+							<div class="form-control" style=" margin-top:32px; padding-left:16px; padding-right:16px; height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: var(--color--white);
+    background-color: var(--color--brown);
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    cursor: pointer;">
 								<!--<input type="submit" class="form-button" value="Submit">-->
-								<a href="product_confirmation.php" class="form-button">Complete Checkout</a>
+								<a href="product_confirmation.php" class="form-button" >Complete Checkout</a>
 							</div>
 						</form>
 					</div>

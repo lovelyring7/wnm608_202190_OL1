@@ -42,8 +42,18 @@
 					<div class="col-xs-12 col-md-5">
 						<div class="card soft flat">
 							<?= cartTotals() ?>
-							<div class="card-section">
-								<a href="product_checkout.php" class="form-button">Checkout</a>
+							<div class="card-section form-button" style="width: 30%; height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: var(--color--white);
+    background-color: var(--color--brown);
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    cursor: pointer;">
+								<a href="product_checkout.php" >Checkout</a>
 							</div>
 						</div>
 					</div>
